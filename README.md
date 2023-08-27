@@ -41,7 +41,7 @@ If you'd like to run the website locally:
 
 ## Deployment
 
-The website is hosted on Github.io and can be accessed at [ThanaritKanjanametawatAU.github.io](https://ThanaritKanjanametawatAU.github.io).
+The website is hosted on Github.io and can be accessed at <a href="https://ThanaritKanjanametawatAU.github.io" target="_blank">ThanaritKanjanametawatAU.github.io</a>.
 
 ## Acknowledgements
 
