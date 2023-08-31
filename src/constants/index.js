@@ -42,129 +42,77 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Data Science",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Artificial Intelligence Development",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Natural Language Processing",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Stable Diffusion",
     icon: creator,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+
+
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Foundations of Computer Programming",
+    company_name: "",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2021 - October 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed a strong foundation in python, java, and c++. ",
+      "Grasping core concepts like algorithms, data structures, and software engineering principles.",
+      "Collaborating with peers on group projects, enhancing teamwork and problem-solving skills.",
+      "Debugging and optimizing code for efficiency and performance.",
+
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: " Data Science Fundamentals",
+    company_name: "",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "October 2021 - October 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Extracting, cleaning, and preprocessing data from various sources to make it suitable for analysis.",
+      "Learning tools like Python, Pandas, and Matplotlib to visualize data trends and patterns.",
+      "Engaging in group discussions and workshops to share findings and learn from peers.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
+    title: "Deep Learning Explorer",
+    company_name: "",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Jan 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Delving into neural networks, understanding their architecture, and experimenting with various layers and nodes.",
+      "Implementing recurrent neural networks (RNN) for sentiment analysis tasks.",
+      "Actively seeking feedback from experts in the field to refine and optimize my deep learning models.",
+
+    ],
+  },
+    {
+    title: "NLP Enthusiast",
+    company_name: "",
+    icon: shopify,
+    iconBg: "#383E56",
+    date: "December 2022 - Present",
+    points: [
+      "Exploring the intricacies of text data and understanding the challenges in processing and analyzing it.",
+      "Implementing sentiment analysis on social media data to gauge public opinion on current events.",
     ],
   },
 ];
@@ -172,88 +120,88 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Thanarit is a very outstanding AI developer. He is very passionate about his work and always goes the extra mile when it's come to machine learning!",
+    name: "Lynn Thit Nyi Nyi",
+    designation: "Talented Web Developer",
+    company: "D-Code Lab",
+    image: "https://avatars.githubusercontent.com/u/108476649?v=4",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "I've never met someone so good at algorithm design as Thanarit. He's a great guy that's always willing to help anyone out!",
+    name: "Tanat Arora",
+    designation: "Junior Data Scientist",
+    company: "ISL Lab",
+    image: "https://avatars.githubusercontent.com/u/111696279?v=4",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Very talented and hardworking individual. He is very passionate about his work and always goes the extra mile when it's come to machine learning!",
+    name: "Saw Zwe Wai Yan",
+    designation: "Lead Machine Learning Engineer",
+    company: "D-Code Lab",
+    image: "https://avatars.githubusercontent.com/u/94424420?v=4",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Reddit Post Sentiment Analysis",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Analyze the sentiment of Reddit posts using Natural Language Processing (NLP) techniques.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "NLP",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Recurrent Neural Network",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://www.kaggle.com/code/thanaritkanjana/isd-reddit-sentiment-analysis?scriptVersionId=123160733",
   },
   {
-    name: "Job IT",
+    name: "Text-Based Deepfake Detection",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Detect GPT generated Text or Human written Text using Reberta combined with Deep Learning.",
     tags: [
       {
-        name: "react",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "NLP",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Research",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ThanaritKanjanametawatAU/Senior-Project-I",
   },
   {
-    name: "Trip Guide",
+    name: "Senior Project II (Coming Soon)",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "TBA",
     tags: [
       {
-        name: "nextjs",
+        name: "Research",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Python",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Algorithm",
         color: "pink-text-gradient",
       },
     ],

@@ -39,7 +39,7 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+        <p className={styles.sectionSubText}></p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
@@ -47,11 +47,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+          Hello! I'm Thanarit, a 3rd year Computer Science student deeply intrigued by Artificial Intelligence (AI),
+          Algorithm Design, and Data Science. From foundational computer science principles, my passion has steered
+          me towards AI's transformative capabilities and data's immense power. I've embarked on projects translating
+          theory into real-world applications. Additionally, I'm captivated by Stable Diffusion, especially in image
+          generation. I relish the challenge of training AI models to manifest my creative visions into tangible
+          images. Let's explore the AI frontier together!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
