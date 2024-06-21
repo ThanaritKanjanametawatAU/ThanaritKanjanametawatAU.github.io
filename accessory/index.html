@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Accessories</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <script src="/js/TableAggregator.js"></script>
+    
+</head>
+<body>
+    <h1>Car Accessories</h1>
+
+    <h2>Add Accessory (Press Enter to Add Item to Table)</h2>
+    <select id="accessory-select">
+        <option value="10">Car Cover</option>
+        <option value="20">Seat Covers</option>
+        <option value="30">Phone Holder</option>
+    </select>
+
+    <!-- On Enter Add Item -->
+    <input type="number" id="amount-input" min="1" value="1" onkeydown="if(event.keyCode === 13) addItem()">
+    <button class="add-button" onclick="addItem()">Add</button>
+
+    <br><br><br><br>
+
+    <h2>Product List</h2>
+
+
+    <table id="product-list">
+        <tr>
+            <th>Accessory</th>
+            <th>Amount</th>
+            <th>Price</th>
+        </tr>
+    </table>
+
+    <br><br><br><br>
+    <h2>Total Price (VAT Excluded): <span id="total-price">$0</span></h2>
+    <h2>VAT: <span id="VatAmount">$0</span></h2>
+    <h2>Total Price (VAT Included): <span id="TotalAmount">$0</span></h2>
+</body>
+</html>
