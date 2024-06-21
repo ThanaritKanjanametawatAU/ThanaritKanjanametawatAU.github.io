@@ -12,5 +12,5 @@ This repository contains the code for the Web Dev 1-2024 course.
 
 - Name: Thanarit Kanjanametawat 
 - ID:6410322
-- GitHub: [ThanaritKanjanametawatAU Profile](https://github.com/ThanaritKanjanametawatAU)
-- Website: [Deployed Website](ThanaritKanjanametawatAU.github.io)
+- GitHub: <a href="https://github.com/ThanaritKanjanametawatAU" target="_blank">Github Overview</a>
+- Website: ThanaritKanjanametawatAU.github.io
