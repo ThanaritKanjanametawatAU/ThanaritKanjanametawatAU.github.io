@@ -4,6 +4,15 @@
 <head>
     <title>VAT Calculator</title>
     <script src="/js/VATCalculator.js"></script>
+    <script>
+        // Add event listener to the document to capture Enter key press
+        document.addEventListener('keydown', function(event) {
+            // Check if the Enter key is pressed
+            if (event.keyCode === 13) {
+                calculateVAT();
+            }
+        });
+    </script>
 </head>
 
 
