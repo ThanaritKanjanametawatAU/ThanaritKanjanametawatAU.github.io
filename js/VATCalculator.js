@@ -12,4 +12,6 @@ function calculateVAT() {
         }
 
 
-
+function calculateTotal() {
+    
+}

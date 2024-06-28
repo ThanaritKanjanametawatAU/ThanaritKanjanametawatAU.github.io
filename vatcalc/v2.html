@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </head>
+        <script>
+        // Add event listener to the document to capture Enter key press
+        document.addEventListener('keydown', function(event) {
+            // Check if the Enter key is pressed
+            if (event.keyCode === 13) {
+                calculate();
+            }
+        });
+    </script>
+    
+    <h1>VAT Calculator V2</h1>
+    <body>
+        Price
+        <input type="number" id="price"> Baht<br>
+        Discount
+        <input type="number" id="discount"> Baht<br>
+        <button onclick="calculate()">Calculate Total</button>
+        <p>
+            <span id="vat">VAT: 0</span>
+        </p>
+        
+    </body>
+    <script>
+        function calculate() {
+            var price = $('#price').val();
+            var discount = $('#discount').val();
+            var vat = (price-discount)* 0.07;
+            $('#vat').html('VAT: ' + vat.toFixed(2))
+        }
+    </script>
+</html>
