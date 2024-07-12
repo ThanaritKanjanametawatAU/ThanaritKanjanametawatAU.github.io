@@ -1,85 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Accessories</title>
-    <link rel="stylesheet" href="/css/global.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/TableAggregator.js"></script>
-    <script>
-        // Add event listener to the document to capture Enter key press
-        document.addEventListener('keydown', function(event) {
-            // Check if the Enter key is pressed
-            if (event.keyCode === 13) {
-                addItemJQuery();
-            }
-        });
-    </script>
-
-    <script>
-        // Use JQuery to add an item to the table
-        function addItemJQuery() {
-            var accessory = $('#accessory-select').val();
-            var amount = $('#amount-input').val();
-            var accessoryName = $('#accessory-select option:selected').text();
-            var price = accessory * amount;
+    <script src="accessory.js"></script>
+    <link rel="stylesheet" href="accessory.css">
 
 
-            // Get the table
-            var table = $('#product-list');
-            // Add a new row to the table
-            table.append('<tr><td>' + accessoryName + '</td><td>' + amount + '</td><td>$' + price.toFixed(2) + '</td></tr>');
-            
-            
-            
-            // Calculate the total price
-            var totalPrice = 0;
-            $('#product-list tr').each(function() {
-                var priceText = $(this).find('td').eq(2).text().replace('$', '');
-                var price = parseFloat(priceText);
-                if (!isNaN(price)) {
-                    totalPrice += price;
-                }
-            });
+    <!-- Bootstrap-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-            // Calculate the VAT, and total amount
-            var vatAmount = totalPrice * 0.07;
-            var NetTotal = totalPrice + vatAmount;
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+                        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+                        crossorigin="anonymous"></script>
 
 
 
 
-            // Update the total price, VAT, and total amount
-            $('#total-price').text('$' + totalPrice.toFixed(2));
-            $('#VatAmount').text('$' + vatAmount.toFixed(2));
-            $('#NetTotal').text('$' + NetTotal.toFixed(2));
-        }
-        
-    </script>
-    
+
 </head>
 <body>
 
     <h1>Car Accessories</h1>
 
-    <h2>Add Accessory (Press Enter to Add Item to Table)</h2>
-    <select id="accessory-select">
-        <option value="10">Car Cover</option>
-        <option value="20">Seat Covers</option>
-        <option value="30">Phone Holder</option>
-    </select>
+    <h2>Add Accessory Here!!</h2>
 
-    <!-- On Enter Add Item -->
-    <input type="number" id="amount-input" min="1" value="1" onkeydown="if(event.keyCode === 13) addItemJQuery()">
-    <button class="add-button" onclick="addItemJQuery()">Add</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddItemModal">Add Item</button>
 
     <br><br><br><br>
 
     <h2>Product List</h2>
 
-    <table id="product-list">
+    <table id="product-list", class="table table-bordered">
         <tr>
             <th>Accessory</th>
             <th>Amount</th>
@@ -91,6 +48,70 @@
     <h2>Total Price (VAT Excluded): <span id="total-price">$0.00</span></h2>
     <h2>VAT (7% of Total Price): <span id="VatAmount">$0.00</span></h2>
     <h2>Net Total (VAT Included): <span id="NetTotal">$0.00</span></h2>
-    
+
+
+
 </body>
+
+
+
+<footer>
+
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="AddItemModal" tabindex="-1" role="dialog"
+        aria-labelledby="AddItemModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+
+                <!-- modal-header -->
+                <div class="modal-header">
+                    <h2 class="modal-title" id="AddItemModalLabel">Add Item</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+
+                <!-- modal-body -->
+                <div class="modal-body">
+                    <table class="table">
+                        <tr>
+                            <td>Description</td>
+                            <td><input type="text" id="newItemDescription"></td>
+                        </tr>
+                        <tr>
+                            <td>Price Per Unit</td>
+                            <td><input type="number" min="0" id="newItemPPU"></td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td><input type="number" min="0" id="newItemQty"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                
+                <!-- modal-footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addItem()">Save New
+                        Item</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+</footer>
 </html>

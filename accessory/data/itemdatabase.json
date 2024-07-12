@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "name": "Car Cover",
+        "price": 10.00
+    },
+
+    {
+        "id": 2,
+        "name": "Seat Cover",
+        "price": 20.00
+    },
+
+    {
+        "id": 3,
+        "name": "Phone Holder",
+        "price": 30.00
+    },
+
+    {
+        "id": 4,
+        "name": "Car Wax",
+        "price": 150.00
+    },
+    {
+        "id": 5,
+        "name": "Iphone 20 Case",
+        "price": 40.00
+    },
+
+    {
+        "id": 6,
+        "name": "Samsung Galaxy S20 Case",
+        "price": 10000.00
+    },
+
+    {
+        "id": 7,
+        "name": "Iphone 20 Screen Protector",
+        "price": 870.00
+    },
+
+    {
+        "id": 8,
+        "name": "Samsung Galaxy S20 Screen Protector",
+        "price": 50090.00
+    },
+
+    {
+        "id": 9,
+        "name": "Iphone 20 Charger",
+        "price": 510.00
+    },
+
+    {
+        "id": 10,
+        "name": "Nuclear Power Bank",
+        "price": 1650.00
+    }
+
+]
