@@ -25,29 +25,47 @@
 
 </head>
 <body>
+    <div class="title-container text-center">
+        <h1 class="shop-title">YILONG MA ACCESSORY</h1>
+        <h2 class="shop-subtitle"> Your All in One Accessories Shop!!!</h2>
+    </div>
 
-    <h1>Car Accessories</h1>
+    
+    <div class="add-button-container">
+        <button type="button" class="btn btn-primary add-button" data-toggle="modal" data-target="#AddItemModal">Add Accessories to Cart</button>
+    </div>
 
-    <h2>Add Accessory Here!!</h2>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddItemModal">Add Item</button>
 
     <br><br><br><br>
 
-    <h2>Product List</h2>
+
+
+    <h2 class="shop-cart-title">Your Cart</h2>
 
     <table id="product-list", class="table table-bordered">
+        <thead>
         <tr>
-            <th>Accessory</th>
-            <th>Amount</th>
-            <th>Price</th>
+            <th >Accessory ID</th>
+            <th>Accessory Name</th>
+            <th>Unit Price ($)</th>
+            <th>Amount (Unit)</th>
+            <th>Total Price ($)</th>
+            <th>Action</th>
         </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
     </table>
 
     <br><br><br><br>
-    <h2>Total Price (VAT Excluded): <span id="total-price">$0.00</span></h2>
-    <h2>VAT (7% of Total Price): <span id="VatAmount">$0.00</span></h2>
-    <h2>Net Total (VAT Included): <span id="NetTotal">$0.00</span></h2>
+    <div class="output-container">
+        <h2 class="output-line">Total Price (VAT Excluded): <span id="total-price">$0.00</span></h2>
+        <h2 class="output-line">VAT (7% of Total Price): <span id="VatAmount">$0.00</span></h2>
+        <h2 class="output-line">Net Total (VAT Included): <span id="NetTotal">$0.00</span></h2>
+    </div>
 
 
 
@@ -58,7 +76,7 @@
 <footer>
 
 
-    <!-- Modal -->
+    <!-- Add Item Modal -->
 
     <div class="modal fade" id="AddItemModal" tabindex="-1" role="dialog"
         aria-labelledby="AddItemModalLabel" aria-hidden="true">
@@ -69,7 +87,7 @@
 
                 <!-- modal-header -->
                 <div class="modal-header">
-                    <h2 class="modal-title" id="AddItemModalLabel">Add Item</h2>
+                    <h2 class="modal-title" id="AddItemModalLabel">Add Item To Cart</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -81,15 +99,11 @@
                     <table class="table">
                         <tr>
                             <td>Description</td>
-                            <td><input type="text" id="newItemDescription"></td>
-                        </tr>
-                        <tr>
-                            <td>Price Per Unit</td>
-                            <td><input type="number" min="0" id="newItemPPU"></td>
+                            <td><select class="modal-select" id="product-dropdown"></select></td>
                         </tr>
                         <tr>
                             <td>Quantity</td>
-                            <td><input type="number" min="0" id="newItemQty"></td>
+                            <td><input type="number" min="1" id="product-amount" value="1"></td>
                         </tr>
                     </table>
                 </div>
@@ -99,8 +113,7 @@
                 <!-- modal-footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="addItem()">Save New
-                        Item</button>
+                    <button type="button" class="btn btn-primary" onclick="addItem()">Save New Item</button>
                 </div>
 
 
@@ -110,6 +123,44 @@
 
     </div>
 
+
+
+
+    <!-- Discard Some Item Modal -->
+    <div class="modal fade" id="discardModal" tabindex="-1" role="dialog" aria-labelledby="discardModalLabel" aria-hidden="true">
+
+
+        <div class="modal-dialog" role="document">
+
+
+            <div class="modal-content">
+
+                <!-- Moal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="discardModalLabel">Discard Items</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <input type="number" id="modalItemQuantity" min="1" placeholder="Enter quantity to discard">
+                    <input type="hidden" id="modalItemId">
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="discardSomeItems()">Discard</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 
     
