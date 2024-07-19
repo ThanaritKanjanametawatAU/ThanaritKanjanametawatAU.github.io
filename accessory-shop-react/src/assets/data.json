@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Door Visor",
+    "price": 1000
+  },
+
+  {
+    "id": 2,
+    "name": "Mud Flap",
+    "price": 500
+  },
+
+  {
+    "id": 3,
+    "name": "Car Cover",
+    "price": 2000
+  },
+
+  {
+    "id": 4,
+    "name": "Seat Cover",
+    "price": 3000
+  },
+
+  {
+    "id": 5,
+    "name": "Steering Cover",
+    "price": 500
+  }
+]
