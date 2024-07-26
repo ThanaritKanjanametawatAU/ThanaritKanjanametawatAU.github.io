@@ -27,5 +27,35 @@
     "id": 5,
     "name": "Steering Cover",
     "price": 500
-  }
+  },
+
+  {
+    "id": 6,
+    "name": "Neck Rest",
+    "price": 300
+  },
+
+  {
+    "id": 7,
+    "name": "Car Perfume",
+    "price": 200
+  },
+
+  {
+    "id": 8,
+    "name": "Mobile Holder",
+    "price": 500
+  },
+
+      {
+     "id": 9,
+     "name": "Car Charger",
+     "price": 300
+      },
+
+      {
+     "id": 10,
+     "name": "Air Freshner",
+     "price": 200
+      }
 ]
