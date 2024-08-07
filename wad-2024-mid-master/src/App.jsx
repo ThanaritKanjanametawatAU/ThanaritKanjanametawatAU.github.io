@@ -18,6 +18,10 @@ function App() {
   const [dataItems, setDataItems] = useState([]);
   const [ppu, setPpu] = useState(products[0].price)
 
+  const clearAll = () => {
+    setDataItems([]);
+  }
+
   const addItem = () => {
     let item = products.find((v) => itemRef.current.value === v.code)
 
@@ -41,6 +45,8 @@ function App() {
       setDataItems([...dataItems, newItem]);
     }
   };
+
+
 
   const deleteByIndex = (index) => {
     let newDataItems = [...dataItems];
@@ -109,7 +115,9 @@ function App() {
         <Col md={8}>
           <QuotationTable
             data={dataItems}
-            deleteByIndex={deleteByIndex} />
+            deleteByIndex={deleteByIndex}
+            clearAll={clearAll}
+          />
         </Col>
 
 
