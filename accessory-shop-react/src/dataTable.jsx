@@ -22,11 +22,24 @@ const DataTable = ({ data, onDelete, onSearch, onSortAsc, onSortDesc}) => {
         <Container>
 
             <br/>
+
+            {/*Table Header Container*/}
             <div style={{display: 'flex', alignItems: 'center'}}>
+
+                {/*Search Box*/}
                 <input type="text" placeholder="Search..." ref={sRef} style={{marginRight: '10px'}}/>
+
+                {/*Search Button*/}
                 <Button onClick={handleSearch}>Search</Button>
+
+                {/*Sort Buttons Container*/}
                 <div style={{marginLeft: '20px', display: 'flex', alignItems: 'center'}}>
+
+                    {/*Plain Text*/}
                     <span>Sort</span>
+
+
+                    {/*Sort Ascending*/}
                     <i
                         className="bi bi-arrow-up"
                         onClick={onSortAsc}
@@ -38,6 +51,9 @@ const DataTable = ({ data, onDelete, onSearch, onSortAsc, onSortDesc}) => {
                             marginRight: '5px'
                         }}
                     ></i>
+
+
+                    {/*Sort Descending*/}
                     <i
                         className="bi bi-arrow-down"
                         onClick={onSortDesc}
@@ -47,8 +63,17 @@ const DataTable = ({ data, onDelete, onSearch, onSortAsc, onSortDesc}) => {
                             padding: '2px'
                         }}
                     ></i>
+
+
                 </div>
+
+
+
             </div>
+
+
+
+
 
 
             {/*Table*/}
@@ -72,6 +97,7 @@ const DataTable = ({ data, onDelete, onSearch, onSortAsc, onSortDesc}) => {
                         <td>{order.price}</td>
                         <td>{order.quantity}</td>
                         <td>{order.subtotal}</td>
+                        {/*"If Onclick Function requires arguments, create a function that execute that function" --Sun Tzu*/}
                         <td><i className="bi bi-trash" onClick={() => onDelete(order.id)}></i></td>
 
                     </tr>
