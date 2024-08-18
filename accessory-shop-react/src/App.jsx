@@ -6,13 +6,16 @@ import Container from 'react-bootstrap/Container';
 import DataTable from './dataTable.jsx';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import productList from './assets/data.json';
+import {useLocalStorage} from "react-use";
+import {TotalPriceContext} from "../context.jsx";
 
 function App() {
   const productRef = useRef();
   const quantityRef = useRef();
   const [productPrice, setProductPrice] = useState(productList[0].price);
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [filteredSelectedItems, setFilteredSelectedItems] = useState([])
+  const [selectedItems, setSelectedItems] = useLocalStorage("selected-items", []);
+  const [filteredSelectedItems, setFilteredSelectedItems] = useState([...selectedItems]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
 
 
@@ -96,18 +99,24 @@ function App() {
 
 
 
-  const getFilteredTotal = () => {
-    return filteredSelectedItems.reduce((total, item) => total + item.subtotal, 0);
-  }
-  const getGrandTotal = () => {
-    return selectedItems.reduce((total, item) => total + item.subtotal, 0);
-  };
-
+  // const getFilteredTotal = () => {
+  //   return filteredSelectedItems.reduce((total, item) => total + item.subtotal, 0);
+  // }
+  // const getGrandTotal = () => {
+  //   return selectedItems.reduce((total, item) => total + item.subtotal, 0);
+  // };
+  //
 
 
 
   return (
-    <Container>
+      <TotalPriceContext.Provider value={{ totalPrice, setTotalPrice }}>
+
+        <Container>
+
+
+
+
       {/* Create Product Form */}
       <Form>
 
@@ -125,6 +134,7 @@ function App() {
         </Form.Group>
         <br />
 
+
         {/* Display: Price */}
         <Form.Group>
           <Form.Label>Price</Form.Label>
@@ -132,12 +142,14 @@ function App() {
         </Form.Group>
         <br />
 
+
         {/* Input: Quantity */}
         <Form.Group>
           <Form.Label>Quantity</Form.Label>
           <Form.Control type="number" ref={quantityRef} />
         </Form.Group>
         <br />
+
 
         {/* Add Button */}
         <Button variant="success" onClick={handleAdd}>
@@ -159,20 +171,29 @@ function App() {
 
 
 
-        {/* Display Filtered Total */}
-        <div className="filtered-total">
-            <h3>Filtered Total: ${getFilteredTotal().toFixed(2)}</h3>
-        </div>
-
-      
-        {/* Display Grand Total */}
-        <div className="grand-total">
-          <h3>Grand Total: ${getGrandTotal().toFixed(2)}</h3>
-       </div>
+       {/* /!* Display Filtered Total *!/*/}
+       {/* <div className="filtered-total">*/}
+       {/*     <h3>Filtered Total: ${getFilteredTotal().toFixed(2)}</h3>*/}
+       {/* </div>*/}
 
 
-    </Container>
-  );
+       {/* /!* Display Grand Total *!/*/}
+       {/* <div className="grand-total">*/}
+       {/*   <h3>Grand Total: ${getGrandTotal().toFixed(2)}</h3>*/}
+       {/*</div>*/}
+
+
+
+      {/*Display Filtered Total With useContext*/}
+      <div className="total">
+        <h3>Total: ${totalPrice.toFixed(2)}</h3>
+      </div>
+
+          </Container>
+
+        </TotalPriceContext.Provider>
+
+        );
 }
 
 export default App;

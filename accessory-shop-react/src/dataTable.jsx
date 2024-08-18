@@ -1,6 +1,8 @@
-import React, {useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import {TotalPriceContext} from "../context.jsx";
+import {useContext} from "react";
 
 import Form from 'react-bootstrap/Form';
 
@@ -9,12 +11,20 @@ import Form from 'react-bootstrap/Form';
 const DataTable = ({ data, onDelete, onSearch, onSortAsc, onSortDesc}) => {
 
     const sRef = useRef();
+    const {totalPrice , setTotalPrice} = useContext(TotalPriceContext);
 
     
     const handleSearch = () => {
         const keyword = sRef.current.value;
         onSearch(keyword);
     }
+
+    useEffect(() => {
+        if (data){
+            const newTotalPrice = data.reduce((acc, item) => acc + item.subtotal, 0);
+            setTotalPrice(newTotalPrice);
+        }
+    });
 
 
 
