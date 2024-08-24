@@ -1,0 +1,2 @@
+curl "http://127.0.0.1:3000/math/add?op1=5&op2=10"
+curl -X POST -H "Content-Type: application/json" -d '{"op1": 5, "op2": 10}' "http://127.0.0.1:3000/math/add"

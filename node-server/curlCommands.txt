@@ -1,0 +1,3 @@
+curl -X GET localhost:8080/echo?name=Dio
+curl -X POST http://localhost:8080/echo -d '{"name":"Dio"}'
+
