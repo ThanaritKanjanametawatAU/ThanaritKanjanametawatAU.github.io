@@ -49,7 +49,9 @@ const router = createBrowserRouter([
       }
     ],
   },
-]);
+], {
+  basename: "/routing-app", // Set the basename to match the deployment path
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
